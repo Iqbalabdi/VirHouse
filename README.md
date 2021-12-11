@@ -1,2 +1,2 @@
 # VirtualHouse
-A House Tour viewer using three.js
+Final Project Kelompok 4 Grafkom A 
