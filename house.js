@@ -1,4 +1,3 @@
-
 // Global variables
 var RENDER_WIDTH = window.innerWidth,
   RENDER_HEIGHT = window.innerHeight;
@@ -16,8 +15,10 @@ var canvas1, context1, textureC;
 var firstPerson = false; // toggle to see if in firstPerson view
 var guiDestroyFlag = false; // toggle used to indicate whether the current GUI needs to be destroyed
 var roofMaterial;
+
 // floor planes
 var plane, kitchenPlane, bedPlane, bathroomPlane, diningPlane, livingPlane;
+
 // floor textures
 var textureBed,
   textureBath,
@@ -27,11 +28,14 @@ var textureBed,
   textureHall1,
   textureHall2,
   textureGround;
-// for mirror material
+
+  // for mirror material
 var bathMirCube, bathMirCubeCamera;
 var bedMirCube, bedMirCubeCamera;
+
 // lights
 var bedroomLamp, diningroomLight, livingroomLight, bathroomLight, kitchenLight;
+
 init();
 animate();
 
@@ -58,8 +62,10 @@ function init() {
   camera.position.x = 20;
   camera.position.z = -20;
   scene.add(camera);
+  
   // set default controller to orbit
   controls = new THREE.OrbitControls(camera, renderer.domElement);
+  
   // add window resize controller
   window.addEventListener("resize", onWindowResize, false);
 
