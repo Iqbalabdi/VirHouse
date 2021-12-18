@@ -561,13 +561,6 @@ function init()
 	sprite1.scale.set(200,100,1.0);
 	scene.add( sprite1 );
 
-
-
-
-
-
-
-
 }
 
 
@@ -864,18 +857,6 @@ function makeGui1() {
 		hall2Plane.material.map = tex;
 });
 
-	// Slide bar used for changing light intensity - in lighting folder
-	var intens = folder1.add( light, 'intensity' ).min(0).max(1).step(.1).listen();
-
-	folder1.add(guiConfig,'nightLight',false).onChange(function(value){
-		bedroomLamp.intensity = value;
-		diningroomLight.intensity = value;
-		kitchenLight.intensity = value;
-		bathroomLight.intensity = value;
-		livingroomLight.intensity = value;
-	});
-
-
 	folder1.add( guiConfig, 'showControls').name("Show Controls").onChange( function() {
 	alert(
 	"---------------------------------------------\n"
@@ -944,15 +925,6 @@ function makeGui2() {
 			camera.position.z = 60;
 			firstPerson = true;
 		}
-	});
-	var intens = gui.add( light, 'intensity' ).min(0).max(1).step(.1).listen();
-
-	gui.add ( guiConfig, 'nightLight', false ).onChange(function(value){
-		bedroomLamp.intensity = value;
-		diningroomLight.intensity = value;
-		kitchenLight.intensity = value;
-		bathroomLight.intensity = value;
-		livingroomLight.intensity = value;
 	});
 
 	gui.add( guiConfig, 'showControls').name("Show Controls").onChange( function() {
