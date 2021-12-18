@@ -328,7 +328,7 @@ function init()
 	roof.position.set( -44,25.2,-134 );
 	roof.rotation.x = 1.57;
 	roofMaterial.opacity = 0;
-	scene.add( roof );
+	//scene.add( roof );
 
 	/////////////////////////////////////////////////////////////////////////////////////
 	///////////////////////////////       Living Room             ///////////////////////
@@ -477,20 +477,6 @@ function init()
 		fragmentShader: document.getElementById( 'fragmentshader' ).textContent,
 	});
 	myMaterial.side = THREE.DoubleSide;
-
-	// Add rainbow wall color plane (mirror side)
-	geometry18 = new THREE.PlaneBufferGeometry( 64,25 );
-	wallShade = new THREE.Mesh( geometry18, myMaterial );
-	wallShade.position.set(48, 13, -66.8);
-	scene.add(wallShade);
-	// Add rainbow wall color plane (closet side)
-	geometry19 = new THREE.PlaneBufferGeometry( 67,25 );
-	wallShade2 = new THREE.Mesh( geometry19, myMaterial );
-	wallShade2.rotation.y = 1.57;
-	wallShade2.position.set(106.28, 13, -99.5);
-	scene.add(wallShade2);
-
-
 
 	// Bedroom mirror
 	var bedMirGeom = new THREE.PlaneBufferGeometry(12, 19)
